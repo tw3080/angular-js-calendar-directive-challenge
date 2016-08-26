@@ -51,6 +51,15 @@ var CalendarRange = {
       last : lastDay,
       days : days
     };
+},
+
+  getYearRange : function(date) {
+      var year = date.getFullYear();
+      return {
+          start: (year - 20),
+          end: (year + 20),
+          year: 40
+      };
   }
 
 };
