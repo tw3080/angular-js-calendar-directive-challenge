@@ -1,0 +1,10 @@
+<nav class="nav">
+    <select ng-model="data.month" ng-change="changeDates()">
+        <option ng-value="$index" ng-repeat="month in months">{{ month }}</option>
+    </select>
+    <select ng-model="data.year" ng-change="changeDates()" ng-options="year for year in yearsList">{{ year }}</select>
+    <div ng-repeat="day in daysList track by $index">
+        {{ day.getDate() }}
+    </div>
+    <button ng-click="getDate()">Get Date</button>
+</nav>
