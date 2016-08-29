@@ -53,6 +53,7 @@ var CalendarRange = {
     };
 },
 
+  // Gets a range of +/- 20 years from the current year
   getYearRange : function(date) {
       var year = date.getFullYear();
       return {
@@ -61,5 +62,4 @@ var CalendarRange = {
           year: 40
       };
   }
-
 };
