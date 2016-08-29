@@ -1,10 +1,17 @@
-<nav class="nav">
-    <select ng-model="data.month" ng-change="changeDates()">
-        <option ng-value="$index" ng-repeat="month in months">{{ month }}</option>
-    </select>
-    <select ng-model="data.year" ng-change="changeDates()" ng-options="year for year in yearsList">{{ year }}</select>
-    <div ng-repeat="day in daysList track by $index">
-        {{ day.getDate() }}
+<div class="wrapper">
+    <!-- Navigation -->
+    <nav class="nav">
+        <!-- Month selection -->
+        <select ng-model="data.month" ng-change="changeDates()">
+            <option ng-value="$index" ng-repeat="month in months">{{ month }}</option>
+        </select>
+        <!-- Year selection -->
+        <select ng-model="data.year" ng-change="changeDates()" ng-options="year for year in yearsList">{{ year }}</select>
+    </nav>
+    <!-- Calendar container -->
+    <div class="cal-container">
+        <div class="cal-box" ng-class="checkDates(day) ? 'dates' : 'extra-dates'" ng-repeat="day in daysList track by $index">
+            {{ day.getDate() }}
+        </div>
     </div>
-    <button ng-click="getDate()">Get Date</button>
-</nav>
+</div>
