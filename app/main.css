@@ -1,1 +1,26 @@
-/* your css code goes here */
+/* Wrapper for centering calendar */
+.wrapper {
+    width: 1000px;
+    height: 600px;
+    margin: 10rem auto;
+}
+
+/* Wrapper around calendar days */
+.cal-container {
+    height: 100%;
+    width: 994px;
+    border: 1px solid #7f7f7f;
+}
+
+/* Each date's box */
+.cal-box {
+    width: 140px;
+    height: 118px;
+    border: 1px solid #7f7f7f;
+    float: left;
+}
+
+/* For days which fall outside of the selected month but are used as padding */
+.extra-dates {
+    background-color: #dedede;
+}
