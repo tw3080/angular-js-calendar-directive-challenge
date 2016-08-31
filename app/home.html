@@ -2,11 +2,11 @@
     <!-- Navigation -->
     <nav class="nav">
         <!-- Month selection -->
-        <select ng-model="data.month" ng-change="changeDates()">
+        <select id="select-month" ng-model="data.month" ng-change="changeDates()">
             <option ng-value="$index" ng-repeat="month in months">{{ month }}</option>
         </select>
         <!-- Year selection -->
-        <select ng-model="data.year" ng-change="changeDates()" ng-options="year for year in yearsList">{{ year }}</select>
+        <select id="select-year" ng-model="data.year" ng-change="changeDates()" ng-options="year for year in yearsList">{{ year }}</select>
     </nav>
     <!-- Calendar container -->
     <div class="cal-container">
