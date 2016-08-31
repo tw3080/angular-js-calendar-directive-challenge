@@ -1,14 +1,5 @@
 var app = angular.module('calendarDemoApp', []);
 
-app.controller('CalendarCtrl', function($scope) {
-    $scope.months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
-
-    $scope.getDate = function() {
-        var date = new Date();
-        console.log(date);
-    };
-});
-
 app.directive('calendar', function() {
     // Gets a new set of dates for the month/year selected by the user
     function getDates(scope) {
@@ -21,7 +12,7 @@ app.directive('calendar', function() {
     }
     return {
         restrict: 'A',
-        templateUrl: 'home.html',
+        templateUrl: 'app/home.html',
         transclude: true,
         scope: true,
         link: function(scope, element, attrs) {
